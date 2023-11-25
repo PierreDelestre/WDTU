@@ -10,7 +10,7 @@ table 50103 "Playlist Line"
 
         field(20; "No."; Code[20]) { }
 
-        field(30; "Date Format"; Option) { OptionMembers = ,Vinyl,CD,MP3,PSA,Advertisement; }
+        field(30; "Data Format"; Option) { OptionMembers = ,Vinyl,CD,MP3,PSA,Advertisement; }
 
         field(40; Publisher; Code[10]) { }
 
