@@ -28,6 +28,26 @@ page 50101 "Radio Show Card"
                 field("Advertising Revenue"; rec."Advertising Revenue") { ApplicationArea = Basic; }
 
                 field("Royalty Cost"; rec."Royalty Cost") { ApplicationArea = Basic; }
+
+                field(Frequency; rec."Royalty Cost") { ApplicationArea = Basic; }
+
+                field("PSA Planned Quantity"; rec."PSA Planned Quantity") { ApplicationArea = Basic; }
+
+                field("Ads Planned Quantity"; rec."Ads Planned Quantity") { ApplicationArea = Basic; }
+
+                field("News Required"; rec."News Required") { ApplicationArea = Basic; }
+
+                field("News Duration"; rec."News Duration") { ApplicationArea = Basic; }
+
+                field("Sports Required"; rec."Sports Required") { ApplicationArea = Basic; }
+
+                field("Sports Duration"; rec."Sports Duration") { ApplicationArea = Basic; }
+
+                field("Weather Required"; rec."Weather Required") { ApplicationArea = Basic; }
+
+                field("Weather Duration"; rec."Weather Duration") { ApplicationArea = Basic; }
+
+                field("Date Filter"; rec."Date Filter") { ApplicationArea = Basic; }
             }
         }
     }
