@@ -1,11 +1,11 @@
 table 50105 "Radio Show Entry"
 {
-    
+
     fields
     {
         field(1; "Entry No."; Integer) { }
-       
-       field(10; "Radio Show No."; Code[20]) { }
+
+        field(10; "Radio Show No."; Code[20]) { }
 
         field(20; Type; Option) { OptionMembers = ,Resource,Show,Item; }
 
@@ -24,8 +24,17 @@ table 50105 "Radio Show Entry"
         field(90; "Fee Amount"; Decimal) { }
 
         field(100; "ACSAP ID"; Integer) { }
-       
-       field(120; "Publisher Code"; Code[10]) { }
+
+        field(120; "Publisher Code"; Code[10]) { }
     }
-    
+
+    keys
+    {
+        key(PK; "Entry No.") { Clustered = true; }
+
+        key(Reporting; "Radio Show No.", Date) { SumIndexFields = "Fee Amount"; }
+
+        key(Reporting2; Type, "No.", Date) { SumIndexFields = "Fee Amount"; }
+    }
+
 }

@@ -20,4 +20,11 @@ table 50106 "Listenership Entry"
 
         field(80; "Age Demographic"; Option) { OptionMembers = ,"0-12","13-18","19-34","35-50","51+"; }
     }
+
+    keys
+    {
+        key(PK; "Entry No.") { Clustered = true; }
+
+        key(Reporting; "Radio Show No.", Date, "Start Time", "Age Demographic") { SumIndexFields = "Listener Count", "Audience Share"; }
+    }
 }

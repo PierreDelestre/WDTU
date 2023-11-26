@@ -22,4 +22,12 @@ table 50103 "Playlist Line"
 
         field(80; "End Time"; Time) { }
     }
+    
+    keys
+    {
+        key(PK; "Document No.", "Line No.")
+        {
+            Clustered = true;
+        }
+    }
 }
