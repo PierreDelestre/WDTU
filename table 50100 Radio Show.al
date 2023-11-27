@@ -27,13 +27,33 @@ table 50100 "Radio Show"
 
         field(60; "Host Name"; Text[50]) { }
 
-        field(100; "Average Listeners"; Decimal) { }
+        field(100; "Average Listeners"; Decimal)
+        {
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = average("Listenership Entry"."Listener Count" where("Radio Show No." = field("No."), Date = field("Date Filter")));
+        }
 
-        field(110; "Audience Share"; Decimal) { }
+        field(110; "Audience Share"; Decimal)
+        {
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = average("Listenership Entry"."Audience Share" where("Radio Show No." = field("No."), Date = field("Date Filter")));
+        }
 
-        field(120; "Advertising Revenue"; Decimal) { }
+        field(120; "Advertising Revenue"; Decimal) 
+        { 
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = sum ("Radio Show Entry"."Fee Amount" where("Radio Show No." = field("No."), "Data Format" = filter(Advertisement)));
+        }
 
-        field(130; "Royalty Cost"; Decimal) { }
+        field(130; "Royalty Cost"; Decimal) 
+        { 
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = sum ("Radio Show Entry"."Fee Amount" where(Date = field("Date Filter"), "Data Format" = filter(Vinyl|CD|MP3)));
+        }
 
         field(1000; Frequency; Option) { OptionMembers = Hourly,Daily,Weekly,Monthly; }
 
