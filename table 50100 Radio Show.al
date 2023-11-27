@@ -4,7 +4,18 @@ table 50100 "Radio Show"
 
     fields
     {
-        field(1; "No."; Code[20]) { }
+        field(1; "No."; Code[20])
+        {
+            trigger OnValidate()
+            begin
+
+            end;
+
+            trigger OnLookup()
+            begin
+
+            end;
+        }
 
         field(10; "Radio Show Type"; Code[10]) { TableRelation = "Radio Show Type"; }
 
