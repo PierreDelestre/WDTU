@@ -2,6 +2,10 @@ page 50100 "Radio Show List"
 {
     PageType = List;
     SourceTable = "Radio Show";
+    ApplicationArea = Basic;
+    UsageCategory = Lists;
+    Editable = false;
+    CardPageId = "Radio Show Card";
 
     layout
     {
@@ -47,7 +51,6 @@ page 50100 "Radio Show List"
 
                 field("Weather Duration"; rec."Weather Duration") { ApplicationArea = Basic; }
 
-                field("Date Filter"; rec."Date Filter") { ApplicationArea = Basic; }
             }
         }
     }

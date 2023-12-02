@@ -17,20 +17,15 @@ page 50101 "Radio Show Card"
 
                 field("Run Time"; rec."Run Time") { ApplicationArea = Basic; }
 
+                field(Frequency; rec.Frequency) { ApplicationArea = Basic; }
+
                 field("Host Code"; rec."Host Code") { ApplicationArea = Basic; }
 
                 field("Host Name"; rec."Host Name") { ApplicationArea = Basic; }
+            }
 
-                field("Average Listeners"; rec."Average Listeners") { ApplicationArea = Basic; }
-
-                field("Audience Share"; rec."Audience Share") { ApplicationArea = Basic; }
-
-                field("Advertising Revenue"; rec."Advertising Revenue") { ApplicationArea = Basic; }
-
-                field("Royalty Cost"; rec."Royalty Cost") { ApplicationArea = Basic; }
-
-                field(Frequency; rec."Royalty Cost") { ApplicationArea = Basic; }
-
+            group(Requirements)
+            {
                 field("PSA Planned Quantity"; rec."PSA Planned Quantity") { ApplicationArea = Basic; }
 
                 field("Ads Planned Quantity"; rec."Ads Planned Quantity") { ApplicationArea = Basic; }
@@ -46,8 +41,17 @@ page 50101 "Radio Show Card"
                 field("Weather Required"; rec."Weather Required") { ApplicationArea = Basic; }
 
                 field("Weather Duration"; rec."Weather Duration") { ApplicationArea = Basic; }
+            }
 
-                field("Date Filter"; rec."Date Filter") { ApplicationArea = Basic; }
+            group(Statistics)
+            {
+                field("Average Listeners"; rec."Average Listeners") { ApplicationArea = Basic; }
+
+                field("Audience Share"; rec."Audience Share") { ApplicationArea = Basic; }
+
+                field("Advertising Revenue"; rec."Advertising Revenue") { ApplicationArea = Basic; }
+
+                field("Royalty Cost"; rec."Royalty Cost") { ApplicationArea = Basic; }
             }
         }
     }
